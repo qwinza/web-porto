@@ -1,85 +1,110 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React from 'react';
+import { Code, Brain, Sparkles, Database, Server, Cpu, Layers } from 'lucide-react';
 import { cvData } from '../data/cvData';
 import './About.css';
 
 const About = () => {
   const { bio } = cvData.profile;
-  const stats = cvData.stats;
-  const skills = cvData.skills;
-  const [animateSkills, setAnimateSkills] = useState(false);
-  const sectionRef = useRef(null);
 
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const [entry] = entries;
-        if (entry.isIntersecting) {
-          setAnimateSkills(true);
-          observer.unobserve(entry.target);
-        }
-      },
-      { threshold: 0.15 }
-    );
-
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
+  const coreCompetencies = [
+    {
+      icon: <Code size={24} className="competency-icon text-blue" />,
+      title: "Full-Stack Web Engineering",
+      desc: "Building high-performance web applications with React, Node.js, Express, and modern ORMs."
+    },
+    {
+      icon: <Brain size={24} className="competency-icon text-purple" />,
+      title: "AI & Computer Vision",
+      desc: "Developing deep learning models with PyTorch/TensorFlow, focusing on Multi-Head Attention architectures."
+    },
+    {
+      icon: <Sparkles size={24} className="competency-icon text-amber" />,
+      title: "Google Student Ambassador",
+      desc: "Leading technical workshops, cloud developer programs, and building student tech communities."
+    },
+    {
+      icon: <Database size={24} className="competency-icon text-emerald" />,
+      title: "Backend & API Architecture",
+      desc: "Designing secure RESTful APIs, database schemas (PostgreSQL/SQL), and scalable backend workflows."
     }
+  ];
 
-    return () => {
-      if (sectionRef.current) {
-        observer.disconnect();
-      }
-    };
-  }, []);
+  const skillGroups = [
+    {
+      category: "Frontend Development",
+      icon: <Layers size={18} />,
+      items: ["React.js", "Next.js", "JavaScript (ES6+)", "TypeScript", "TailwindCSS", "CSS3 / Sass", "Zustand / Redux"]
+    },
+    {
+      category: "Backend & Cloud Infrastructure",
+      icon: <Server size={18} />,
+      items: ["Node.js", "Express.js", "Prisma ORM", "RESTful APIs", "PostgreSQL", "SQL", "Docker", "Git & GitHub"]
+    },
+    {
+      category: "AI, Machine Learning & Automation",
+      icon: <Cpu size={18} />,
+      items: ["Python", "PyTorch", "TensorFlow", "Computer Vision", "Multi-Head Attention", "FinBERT", "Speech-to-Text API"]
+    }
+  ];
 
   return (
-    <section id="about" ref={sectionRef}>
+    <section id="about">
       <div className="container">
         <h2 className="section-title fade-in-up">About Me</h2>
         <p className="section-subtitle fade-in-up animation-delay-100">
-          A brief insight into my professional journey, key milestones, and core technologies.
+          A dedicated Informatics Engineering student specializing in Software Engineering and Artificial Intelligence.
         </p>
 
-        <div className="about-grid">
-          {/* Bio & Stats */}
-          <div className="about-info fade-in-up animation-delay-200">
-            <p className="about-bio">{bio}</p>
-            
-            <div className="stats-grid">
-              {stats.map((stat, idx) => (
-                <div key={idx} className="stat-card glass-card">
-                  <div className="stat-value">{stat.value}</div>
-                  <div className="stat-label">{stat.label}</div>
+        <div className="about-wrapper">
+          {/* Top Bio & Highlights Grid */}
+          <div className="about-header-grid fade-in-up animation-delay-200">
+            <div className="about-bio-card glass-card">
+              <h3 className="bio-card-title">Professional Overview</h3>
+              <p className="about-bio">{bio}</p>
+              
+              <div className="bio-focus-tags">
+                <span className="focus-badge">Software Engineering</span>
+                <span className="focus-badge">AI & Machine Learning</span>
+                <span className="focus-badge">Computer Vision Research</span>
+              </div>
+            </div>
+
+            {/* Core Competencies 2x2 Grid */}
+            <div className="competencies-grid">
+              {coreCompetencies.map((comp, idx) => (
+                <div key={idx} className="competency-card glass-card">
+                  <div className="competency-header">
+                    <div className="competency-icon-bg">{comp.icon}</div>
+                    <h4 className="competency-title">{comp.title}</h4>
+                  </div>
+                  <p className="competency-desc">{comp.desc}</p>
                 </div>
               ))}
             </div>
           </div>
 
-          {/* Skill Bars */}
-          <div className="skills-container fade-in-up animation-delay-300">
-            {skills.map((category, catIdx) => (
-              <div key={catIdx} className="skills-category">
-                <h3 className="skills-category-title">{category.category}</h3>
-                
-                <div className="skills-list">
-                  {category.items.map((skill, skillIdx) => (
-                    <div key={skillIdx} className="skill-item">
-                      <div className="skill-info">
-                        <span className="skill-name">{skill.name}</span>
-                        <span className="skill-level-percentage">{skill.level}%</span>
-                      </div>
-                      
-                      <div className="skill-bar-bg">
-                        <div 
-                          className="skill-bar-fill"
-                          style={{ width: animateSkills ? `${skill.level}%` : '0%' }}
-                        ></div>
-                      </div>
-                    </div>
-                  ))}
+          {/* Bottom Skills Section */}
+          <div className="skills-section fade-in-up animation-delay-300">
+            <h3 className="skills-main-title">Technical Expertise & Tooling</h3>
+            
+            <div className="skills-cards-grid">
+              {skillGroups.map((group, gIdx) => (
+                <div key={gIdx} className="skill-group-card glass-card">
+                  <div className="skill-group-header">
+                    <span className="skill-group-icon">{group.icon}</span>
+                    <h4 className="skill-group-category">{group.category}</h4>
+                  </div>
+
+                  <div className="skill-tags-list">
+                    {group.items.map((skill, sIdx) => (
+                      <span key={sIdx} className="skill-chip">
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </div>
