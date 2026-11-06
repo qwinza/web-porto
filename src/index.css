@@ -104,7 +104,6 @@ main > section:nth-of-type(even) { background-color: var(--bg-secondary); }
 /* Typography utilities */
 .section-eyebrow {
   display: block;
-  text-align: center;
   font-family: var(--font-heading);
   font-size: 0.8rem;
   font-weight: 700;
@@ -119,19 +118,16 @@ main > section:nth-of-type(even) { background-color: var(--bg-secondary); }
   font-weight: 800;
   letter-spacing: -0.03em;
   margin-bottom: 1rem;
-  text-align: center;
+  text-align: left;
   position: relative;
   display: inline-block;
-  left: 50%;
-  transform: translateX(-50%);
 }
 
 .section-title::after {
   content: '';
   position: absolute;
   bottom: -12px;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 0;
   width: 44px;
   height: 3px;
   background: var(--accent);
@@ -139,11 +135,11 @@ main > section:nth-of-type(even) { background-color: var(--bg-secondary); }
 }
 
 .section-subtitle {
-  text-align: center;
+  text-align: left;
   font-size: 1.1rem;
   color: var(--text-secondary);
   max-width: 640px;
-  margin: 1.75rem auto 4rem;
+  margin: 1.75rem 0 4rem;
 }
 
 /* Buttons */

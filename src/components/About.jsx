@@ -5,6 +5,7 @@ import './About.css';
 
 const About = () => {
   const { bio } = cvData.profile;
+  const { stats } = cvData;
 
   const coreCompetencies = [
     {
@@ -55,6 +56,15 @@ const About = () => {
         <p className="section-subtitle fade-in-up animation-delay-100">
           Software House yang berfokus pada Custom Web App, Sistem B2B, dan Transformasi Digital.
         </p>
+
+        <div className="stats-row fade-in-up animation-delay-200">
+          {stats.map((stat, idx) => (
+            <div className="stat-item" key={idx}>
+              <span className="stat-value">{stat.value}</span>
+              <span className="stat-label">{stat.label}</span>
+            </div>
+          ))}
+        </div>
 
         <div className="about-wrapper">
           {/* Top Bio & Highlights Grid */}

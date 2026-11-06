@@ -1,3 +1,49 @@
+/* Stats Bar */
+.stats-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 3.5rem;
+  padding: 2.25rem 0;
+  border-top: 1px solid var(--glass-border);
+  border-bottom: 1px solid var(--glass-border);
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  text-align: center;
+  position: relative;
+}
+
+.stat-item:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  right: -0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1px;
+  height: 48px;
+  background: var(--glass-border);
+}
+
+.stat-value {
+  font-family: var(--font-heading);
+  font-size: 2.4rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: var(--accent);
+  line-height: 1;
+}
+
+.stat-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  letter-spacing: 0.01em;
+}
+
 /* Main Wrapper */
 .about-wrapper {
   display: flex;
@@ -140,7 +186,6 @@
   font-size: 1.4rem;
   font-weight: 700;
   color: var(--text-primary);
-  text-align: center;
 }
 
 .skills-cards-grid {
@@ -222,6 +267,15 @@
 }
 
 @media (max-width: 640px) {
+  .stats-row {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .stat-item:not(:last-child)::after { display: none; }
+
+  .stat-value { font-size: 2rem; }
+
   .competencies-grid {
     grid-template-columns: 1fr;
   }
