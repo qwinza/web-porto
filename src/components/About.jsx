@@ -1,5 +1,5 @@
 import React from 'react';
-import { Code, Brain, Sparkles, Database, Server, Cpu, Layers } from 'lucide-react';
+import { Code, Database, Cpu, Server, Layers } from 'lucide-react';
 import { cvData } from '../data/cvData';
 import './About.css';
 
@@ -9,63 +9,63 @@ const About = () => {
   const coreCompetencies = [
     {
       icon: <Code size={24} className="competency-icon text-blue" />,
-      title: "Full-Stack Web Engineering",
-      desc: "Building high-performance web applications with React, Node.js, Express, and modern ORMs."
-    },
-    {
-      icon: <Brain size={24} className="competency-icon text-purple" />,
-      title: "AI & Computer Vision",
-      desc: "Developing deep learning models with PyTorch/TensorFlow, focusing on Multi-Head Attention architectures."
-    },
-    {
-      icon: <Sparkles size={24} className="competency-icon text-amber" />,
-      title: "Google Student Ambassador",
-      desc: "Leading technical workshops, cloud developer programs, and building student tech communities."
+      title: "Custom Web App",
+      desc: "Aplikasi web custom yang dirancang sesuai alur bisnis Anda: dashboard, portal, dan sistem internal."
     },
     {
       icon: <Database size={24} className="competency-icon text-emerald" />,
-      title: "Backend & API Architecture",
-      desc: "Designing secure RESTful APIs, database schemas (PostgreSQL/SQL), and scalable backend workflows."
+      title: "Sistem B2B",
+      desc: "Platform B2B untuk manajemen stok, transaksi, dan integrasi antar-pihak dengan alur yang jelas."
+    },
+    {
+      icon: <Cpu size={24} className="competency-icon text-purple" />,
+      title: "Integrasi AI & Otomasi",
+      desc: "Otomasi proses dan integrasi AI untuk efisiensi operasional serta pengambilan keputusan."
+    },
+    {
+      icon: <Server size={24} className="competency-icon text-amber" />,
+      title: "Cloud & DevOps",
+      desc: "Deploy aman dan andal di server/cloud, dengan pipeline rilis yang stabil."
     }
   ];
 
   const skillGroups = [
     {
-      category: "Frontend Development",
+      category: "Frontend",
       icon: <Layers size={18} />,
-      items: ["React.js", "Next.js", "JavaScript (ES6+)", "TypeScript", "TailwindCSS", "CSS3 / Sass", "Zustand / Redux"]
+      items: ["React.js", "Next.js", "JavaScript (ES6+)", "TypeScript", "TailwindCSS", "CSS3 / Sass"]
     },
     {
-      category: "Backend & Cloud Infrastructure",
+      category: "Backend & Cloud",
       icon: <Server size={18} />,
-      items: ["Node.js", "Express.js", "Prisma ORM", "RESTful APIs", "PostgreSQL", "SQL", "Docker", "Git & GitHub"]
+      items: ["Node.js", "Express.js", "Laravel", "Prisma ORM", "RESTful APIs", "MySQL / PostgreSQL", "Docker", "Git & GitHub"]
     },
     {
-      category: "AI, Machine Learning & Automation",
+      category: "AI & Otomasi",
       icon: <Cpu size={18} />,
-      items: ["Python", "PyTorch", "TensorFlow", "Computer Vision", "Multi-Head Attention", "FinBERT", "Speech-to-Text API"]
+      items: ["Python", "PyTorch", "TensorFlow", "Computer Vision", "FinBERT", "Otomasi Proses"]
     }
   ];
 
   return (
     <section id="about">
       <div className="container">
-        <h2 className="section-title fade-in-up">About Me</h2>
+        <h2 className="section-title fade-in-up">Tentang Kami</h2>
         <p className="section-subtitle fade-in-up animation-delay-100">
-          A dedicated Informatics Engineering student specializing in Software Engineering and Artificial Intelligence.
+          Software House yang berfokus pada Custom Web App, Sistem B2B, dan Transformasi Digital.
         </p>
 
         <div className="about-wrapper">
           {/* Top Bio & Highlights Grid */}
           <div className="about-header-grid fade-in-up animation-delay-200">
             <div className="about-bio-card glass-card">
-              <h3 className="bio-card-title">Professional Overview</h3>
+              <h3 className="bio-card-title">Profil Perusahaan</h3>
               <p className="about-bio">{bio}</p>
-              
+
               <div className="bio-focus-tags">
-                <span className="focus-badge">Software Engineering</span>
-                <span className="focus-badge">AI & Machine Learning</span>
-                <span className="focus-badge">Computer Vision Research</span>
+                <span className="focus-badge">Custom Web App</span>
+                <span className="focus-badge">Sistem B2B</span>
+                <span className="focus-badge">Transformasi Digital</span>
               </div>
             </div>
 
@@ -85,8 +85,8 @@ const About = () => {
 
           {/* Bottom Skills Section */}
           <div className="skills-section fade-in-up animation-delay-300">
-            <h3 className="skills-main-title">Technical Expertise & Tooling</h3>
-            
+            <h3 className="skills-main-title">Keahlian Teknis &amp; Tools</h3>
+
             <div className="skills-cards-grid">
               {skillGroups.map((group, gIdx) => (
                 <div key={gIdx} className="skill-group-card glass-card">

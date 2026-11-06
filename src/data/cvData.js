@@ -5,10 +5,10 @@ export { projectsData, experienceData, profileData };
 export const cvData = {
   profile: profileData,
   stats: [
-    { value: "5+", label: "Years of Experience" },
-    { value: "40+", label: "Completed Projects" },
-    { value: "99%", label: "Client Satisfaction" },
-    { value: "15+", label: "Open Source Tools" },
+    { value: "5+", label: "Tahun Pengalaman" },
+    { value: "40+", label: "Proyek Selesai" },
+    { value: "99%", label: "Kepuasan Klien" },
+    { value: "15+", label: "Teknologi Dikuasai" },
   ],
   skills: [
     {
@@ -26,7 +26,7 @@ export const cvData = {
       items: [
         { name: "Node.js / Express", level: 88 },
         { name: "GraphQL / REST APIs", level: 90 },
-        { name: "PostgreSQL / MongoDB", level: 85 },
+        { name: "PostgreSQL / MySQL", level: 85 },
         { name: "Docker / AWS", level: 75 },
         { name: "Serverless Functions", level: 80 },
       ],
@@ -37,51 +37,51 @@ export const cvData = {
         { name: "Figma UI/UX Design", level: 80 },
         { name: "Git & GitHub Actions", level: 88 },
         { name: "Vite / Webpack", level: 85 },
-        { name: "Web Performance Optimization", level: 90 },
+        { name: "Optimasi Performa Web", level: 90 },
       ],
     },
   ],
   experience: experienceData,
   education: [
     {
-      degree: "Informatics Engineering (Teknik Informatika)",
+      degree: "S1 Teknik Informatika",
       institution: "Institut Teknologi Nasional Bandung",
-      period: "2024 - Present",
+      period: "2024 - Sekarang",
       details:
-        "Active undergraduate student focusing on software development systems, object-oriented programming, database engineering, and web application architectures.",
+        "Fokus pada rekayasa perangkat lunak, pemrograman berorientasi objek, perancangan basis data, dan arsitektur aplikasi web.",
     },
     {
-      degree: "Software Engineering (Rekayasa Perangkat Lunak)",
+      degree: "Rekayasa Perangkat Lunak (RPL)",
       institution: "SMKN 2 Bandung",
       period: "2019 - 2022",
       details:
-        "Vocational high school graduate. Acquired solid foundations in programming fundamentals, database design, and front-end development.",
+        "Fondasi pemrograman, desain basis data, dan pengembangan front-end.",
     },
   ],
   projects: projectsData,
   services: [
     {
-      title: "Frontend Development",
+      title: "Pengembangan Custom Web App",
       description:
-        "Crafting responsive, high-performance web applications using modern React, Next.js, and native browser APIs. Optimized for Core Web Vitals and accessibility.",
+        "Aplikasi web custom yang dirancang sesuai alur bisnis Anda: dashboard, portal, dan sistem internal yang responsif dan cepat.",
       icon: "Cpu",
     },
     {
-      title: "UI/UX Design Systems",
+      title: "UI/UX & Design System",
       description:
-        "Designing interactive, scalable design systems and layouts in Figma, then translating them into robust, clean components with vanilla styles.",
+        "Desain antarmuka dan design system yang konsisten di Figma, lalu diimplementasikan menjadi komponen yang rapi dan aksesibel.",
       icon: "Palette",
     },
     {
-      title: "API & Database Architecture",
+      title: "Arsitektur API & Database",
       description:
-        "Building secure, scalable RESTful and GraphQL APIs with Node.js and integrating them with relational and non-relational database systems.",
+        "Membangun REST API dan GraphQL yang aman dengan Node.js, terintegrasi ke basis data relasional maupun non-relasional.",
       icon: "Database",
     },
     {
-      title: "Performance Optimization",
+      title: "Optimasi Performa",
       description:
-        "Auditing and optimizing existing web applications to decrease bundle size, implement asset caching, and achieve 95+ PageSpeed scores.",
+        "Audit dan optimasi aplikasi web untuk memperkecil bundle, menerapkan caching aset, dan mencapai skor PageSpeed 95+.",
       icon: "Zap",
     },
   ],

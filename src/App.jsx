@@ -27,17 +27,14 @@ function App() {
 
       <footer className="footer">
         <div className="container footer-content">
-          <div className="footer-logo">AR.</div>
+          <div className="footer-logo">FAS Digital Solutions</div>
           
           <div className="footer-socials">
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <a href="https://github.com/qwinza" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
               <Icon name="Github" size={20} />
             </a>
             <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
               <Icon name="Linkedin" size={20} />
-            </a>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
-              <Icon name="Twitter" size={20} />
             </a>
           </div>
 

@@ -19,9 +19,9 @@ const Projects = () => {
   return (
     <section id="projects">
       <div className="container">
-        <h2 className="section-title fade-in-up">Featured Projects</h2>
+        <h2 className="section-title fade-in-up">Our Portfolio &amp; Services</h2>
         <p className="section-subtitle fade-in-up animation-delay-100">
-          A selection of projects that showcase my software engineering, full-stack, and AI capabilities.
+          Portofolio proyek komersial untuk klien B2B, dari portal korporat hingga sistem internal dan integrasi API.
         </p>
 
         {/* Filter Navigation */}

@@ -10,16 +10,16 @@ const Experience = () => {
   return (
     <section id="experience">
       <div className="container">
-        <h2 className="section-title fade-in-up">Journey & Expertise</h2>
+        <h2 className="section-title fade-in-up">Track Record &amp; Keahlian</h2>
         <p className="section-subtitle fade-in-up animation-delay-100">
-          A walk through my professional work experience and academic milestones.
+          Pengalaman dan keahlian yang kami bawa ke setiap proyek.
         </p>
 
         <div className="experience-container">
           {/* Work Experience Timeline */}
           <div className="work-experience-section fade-in-up animation-delay-200">
             <h3 className="experience-title-sub">
-              <Briefcase size={22} /> Work Experience
+              <Briefcase size={22} /> Pengalaman
             </h3>
 
             <div className="timeline">
@@ -64,7 +64,7 @@ const Experience = () => {
           {/* Education & Academic Section */}
           <div className="education-section fade-in-up animation-delay-300">
             <h3 className="experience-title-sub">
-              <GraduationCap size={22} /> Education
+              <GraduationCap size={22} /> Pendidikan
             </h3>
 
             <div className="education-list">

@@ -1,15 +1,15 @@
 import React, { useState, useEffect } from 'react';
-import { ArrowRight, FileText } from 'lucide-react';
+import { ArrowRight, Briefcase } from 'lucide-react';
 import { cvData } from '../data/cvData';
 import './Hero.css';
 
 const Hero = () => {
-  const { name, title, subtitle, avatar, resumeUrl } = cvData.profile;
+  const { name, subtitle, avatar } = cvData.profile;
   const [typedText, setTypedText] = useState('');
   const [wordIndex, setWordIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
 
-  const words = [title, 'Software Engineer', 'AI & ML Developer', 'Full-Stack Developer'];
+  const words = ['Custom Web App', 'Sistem B2B', 'Transformasi Digital', 'Company Profile'];
   const typingSpeed = 100;
   const deletingSpeed = 50;
   const delayBetweenWords = 2000;
@@ -38,16 +38,16 @@ const Hero = () => {
     return () => clearTimeout(timer);
   }, [typedText, isDeleting, wordIndex, words]);
 
-  const handleContactClick = (e) => {
+  const whatsappUrl =
+    'https://wa.me/6281949095389?text=Halo%20FAS%20Digital%20Solutions%2C%20saya%20ingin%20konsultasi%20IT%20gratis.';
+
+  const scrollToId = (e, id) => {
     e.preventDefault();
-    const el = document.getElementById('contact');
+    const el = document.getElementById(id);
     if (el) {
-      window.scrollTo({
-        top: el.offsetTop - 70,
-        behavior: 'smooth'
-      });
+      window.scrollTo({ top: el.offsetTop - 70, behavior: 'smooth' });
     } else {
-      window.location.hash = 'contact';
+      window.location.hash = id;
     }
   };
 
@@ -56,29 +56,32 @@ const Hero = () => {
       <div className="container">
         <div className="hero-grid">
           <div className="hero-content fade-in-up">
-            <span className="hero-tagline">Software Engineering & AI Portfolio</span>
+            <span className="hero-tagline">Software House &bull; IT &amp; Custom Web Solutions</span>
             <h1 className="hero-title">
-              Hi, I'm <span>{name}</span>
+              <span>{name}</span>
               <br />
               <span className="typed-text-container">
-                a {typedText}
+                Spesialis {typedText}
                 <span className="typing-cursor"></span>
               </span>
             </h1>
             <p className="hero-subtitle">{subtitle}</p>
 
             <div className="hero-buttons">
-              <a href="#contact" className="btn btn-primary" onClick={handleContactClick}>
-                Get in Touch <ArrowRight size={18} />
-              </a>
               <a
-                href={resumeUrl || "/resume.pdf"}
-                download="Resume_Aa_Faris_Ahmad_Shidiq.pdf"
-                className="btn btn-secondary"
+                href={whatsappUrl}
+                className="btn btn-primary"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Download Resume <FileText size={18} />
+                Konsultasi IT Gratis <ArrowRight size={18} />
+              </a>
+              <a
+                href="#projects"
+                className="btn btn-secondary"
+                onClick={(e) => scrollToId(e, 'projects')}
+              >
+                Lihat Portofolio <Briefcase size={18} />
               </a>
             </div>
           </div>

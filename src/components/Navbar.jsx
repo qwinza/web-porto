@@ -9,11 +9,11 @@ const Navbar = () => {
   const [activeSection, setActiveSection] = useState('home');
 
   const navItems = [
-    { id: 'home', label: 'Home' },
-    { id: 'about', label: 'About' },
-    { id: 'experience', label: 'Experience' },
-    { id: 'projects', label: 'Projects' },
-    { id: 'contact', label: 'Contact' }
+    { id: 'home', label: 'Beranda' },
+    { id: 'about', label: 'Tentang' },
+    { id: 'experience', label: 'Pengalaman' },
+    { id: 'projects', label: 'Portofolio' },
+    { id: 'contact', label: 'Kontak' }
   ];
 
   useEffect(() => {
@@ -66,7 +66,7 @@ const Navbar = () => {
     <header className={`navbar-header ${scrolled ? 'scrolled' : ''}`}>
       <div className="navbar-container">
         <a href="#home" className="navbar-logo" onClick={(e) => handleNavClick(e, 'home')}>
-          <span>AR.</span>
+          <span>FAS Digital Solutions</span>
         </a>
 
         {/* Desktop Nav Links */}
