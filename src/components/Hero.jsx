@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { ArrowRight, Briefcase } from 'lucide-react';
 import { cvData } from '../data/cvData';
+import logoImage from '../assets/logo-agency.png';
 import './Hero.css';
 
 const Hero = () => {
-  const { name, subtitle, avatar } = cvData.profile;
+  const { name, subtitle } = cvData.profile;
   const [typedText, setTypedText] = useState('');
   const [wordIndex, setWordIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
@@ -88,14 +89,7 @@ const Hero = () => {
 
           <div className="hero-image-container fade-in-up animation-delay-200">
             <div className="hero-image-wrapper">
-              <img
-                src={avatar}
-                alt={name}
-                onError={(e) => {
-                  e.target.src =
-                    'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=500';
-                }}
-              />
+              <img src={logoImage} alt="Logo FAS Digital Solutions" />
             </div>
           </div>
         </div>
