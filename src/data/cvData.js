@@ -42,22 +42,6 @@ export const cvData = {
     },
   ],
   experience: experienceData,
-  education: [
-    {
-      degree: "S1 Teknik Informatika",
-      institution: "Institut Teknologi Nasional Bandung",
-      period: "2024 - Sekarang",
-      details:
-        "Fokus pada rekayasa perangkat lunak, pemrograman berorientasi objek, perancangan basis data, dan arsitektur aplikasi web.",
-    },
-    {
-      degree: "Rekayasa Perangkat Lunak (RPL)",
-      institution: "SMKN 2 Bandung",
-      period: "2019 - 2022",
-      details:
-        "Fondasi pemrograman, desain basis data, dan pengembangan front-end.",
-    },
-  ],
   projects: projectsData,
   services: [
     {

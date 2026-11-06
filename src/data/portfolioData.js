@@ -1,5 +1,3 @@
-import resumePdf from '../assets/Curriculum Vitae.pdf';
-
 export const projectsData = [
   {
     id: 1,
@@ -121,7 +119,6 @@ export const profileData = {
   subtitle:
     "Membangun solusi digital custom untuk bisnis Anda, dari company profile hingga sistem B2B dan transformasi digital.",
   bio: "FAS Digital Solutions adalah Software House yang berfokus pada pengembangan Custom Web App, Sistem B2B, dan Transformasi Digital. Dipimpin oleh Aa Faris Ahmad Shidiq selaku Lead Developer",
-  resumeUrl: resumePdf,
   socials: [
     { name: "Github", url: "https://github.com/qwinza", icon: "Github" },
     { name: "LinkedIn", url: "https://linkedin.com", icon: "Linkedin" },

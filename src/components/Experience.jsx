@@ -1,11 +1,10 @@
 import React from 'react';
-import { Briefcase, GraduationCap } from 'lucide-react';
+import { Briefcase } from 'lucide-react';
 import { cvData } from '../data/cvData';
 import './Experience.css';
 
 const Experience = () => {
   const experiences = cvData.experience;
-  const education = cvData.education;
 
   return (
     <section id="experience">
@@ -56,24 +55,6 @@ const Experience = () => {
                       </div>
                     )}
                   </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Education & Academic Section */}
-          <div className="education-section fade-in-up animation-delay-300">
-            <h3 className="experience-title-sub">
-              <GraduationCap size={22} /> Pendidikan
-            </h3>
-
-            <div className="education-list">
-              {education.map((edu, idx) => (
-                <div key={idx} className="education-card glass-card">
-                  <h4 className="education-degree">{edu.degree}</h4>
-                  <div className="education-institution">{edu.institution}</div>
-                  <span className="education-period">{edu.period}</span>
-                  <p className="education-details">{edu.details}</p>
                 </div>
               ))}
             </div>
