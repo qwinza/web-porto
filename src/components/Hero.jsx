@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { ArrowRight, Briefcase } from 'lucide-react';
 import { cvData } from '../data/cvData';
-import logoImage from '../assets/logo-agency.png';
+import logoImage from '../assets/logo-agency-light.png';
 import './Hero.css';
 
 const Hero = () => {
@@ -59,8 +59,11 @@ const Hero = () => {
           <div className="hero-content fade-in-up">
             <span className="hero-tagline">Software House &bull; IT &amp; Custom Web Solutions</span>
             <h1 className="hero-title">
-              Spesialis <span className="typed-accent">{typedText}</span>
-              <span className="typing-cursor"></span>
+              <span className="hero-title-top">Spesialis</span>
+              <span className="hero-typed-line">
+                <span className="typed-accent">{typedText}</span>
+                <span className="typing-cursor"></span>
+              </span>
             </h1>
             <p className="hero-subtitle">{subtitle}</p>
 

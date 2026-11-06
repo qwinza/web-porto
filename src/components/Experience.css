@@ -20,8 +20,7 @@
 /* Timeline */
 .timeline {
   position: relative;
-  padding-left: 2rem;
-  border-left: 2px solid var(--bg-tertiary);
+  padding-left: 2.5rem;
   display: flex;
   flex-direction: column;
   gap: 3rem;
@@ -31,10 +30,21 @@
   position: relative;
 }
 
+/* Connector from each dot down to the next node; last item has none so the rail terminates at the final node */
+.timeline-item:not(:last-child)::before {
+  content: '';
+  position: absolute;
+  left: calc(-2.5rem + 6px);
+  top: 1.25rem;
+  height: calc(100% + 2.54rem);
+  width: 2px;
+  background: var(--bg-tertiary);
+}
+
 .timeline-dot {
   position: absolute;
-  left: -2.45rem;
-  top: 0.25rem;
+  left: -2.5rem;
+  top: 0.35rem;
   width: 14px;
   height: 14px;
   border-radius: var(--border-radius-full);
