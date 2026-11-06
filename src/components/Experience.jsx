@@ -9,6 +9,7 @@ const Experience = () => {
   return (
     <section id="experience">
       <div className="container">
+        <span className="section-eyebrow fade-in-up">Rekam Jejak</span>
         <h2 className="section-title fade-in-up">Track Record &amp; Keahlian</h2>
         <p className="section-subtitle fade-in-up animation-delay-100">
           Pengalaman dan keahlian yang kami bawa ke setiap proyek.

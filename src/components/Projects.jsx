@@ -19,6 +19,7 @@ const Projects = () => {
   return (
     <section id="projects">
       <div className="container">
+        <span className="section-eyebrow fade-in-up">Portofolio</span>
         <h2 className="section-title fade-in-up">Our Portfolio &amp; Services</h2>
         <p className="section-subtitle fade-in-up animation-delay-100">
           Portofolio proyek komersial untuk klien B2B, dari portal korporat hingga sistem internal dan integrasi API.

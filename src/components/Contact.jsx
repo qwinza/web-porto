@@ -21,6 +21,7 @@ const Contact = () => {
   return (
     <section id="contact">
       <div className="container">
+        <span className="section-eyebrow fade-in-up">Kontak</span>
         <h2 className="section-title fade-in-up">Konsultasi IT Gratis</h2>
         <p className="section-subtitle fade-in-up animation-delay-100">
           Bahas kebutuhan digital bisnis Anda. Konsultasi awal gratis, tanpa komitmen.

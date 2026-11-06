@@ -50,6 +50,7 @@ const About = () => {
   return (
     <section id="about">
       <div className="container">
+        <span className="section-eyebrow fade-in-up">Profil</span>
         <h2 className="section-title fade-in-up">Tentang Kami</h2>
         <p className="section-subtitle fade-in-up animation-delay-100">
           Software House yang berfokus pada Custom Web App, Sistem B2B, dan Transformasi Digital.

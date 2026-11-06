@@ -5,12 +5,12 @@ import logoImage from '../assets/logo-agency.png';
 import './Hero.css';
 
 const Hero = () => {
-  const { name, subtitle } = cvData.profile;
+  const { subtitle } = cvData.profile;
   const [typedText, setTypedText] = useState('');
   const [wordIndex, setWordIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
 
-  const words = ['Custom Web App', 'Sistem B2B', 'Transformasi Digital', 'Company Profile'];
+  const words = ['Custom Web App', 'Sistem B2B', 'Transformasi Digital', 'Integrasi AI'];
   const typingSpeed = 100;
   const deletingSpeed = 50;
   const delayBetweenWords = 2000;
@@ -59,12 +59,8 @@ const Hero = () => {
           <div className="hero-content fade-in-up">
             <span className="hero-tagline">Software House &bull; IT &amp; Custom Web Solutions</span>
             <h1 className="hero-title">
-              <span>{name}</span>
-              <br />
-              <span className="typed-text-container">
-                Spesialis {typedText}
-                <span className="typing-cursor"></span>
-              </span>
+              Spesialis <span className="typed-accent">{typedText}</span>
+              <span className="typing-cursor"></span>
             </h1>
             <p className="hero-subtitle">{subtitle}</p>
 

@@ -7,11 +7,11 @@
   background-color: var(--bg-primary);
 }
 
-/* Footer Section */
+/* Footer */
 .footer {
-  background: var(--bg-secondary);
-  border-top: 1px solid var(--glass-border);
-  padding: 3rem 0;
+  background: #0f172a;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 4rem 0;
   text-align: center;
   margin-top: auto;
 }
@@ -27,15 +27,14 @@
   font-family: var(--font-heading);
   font-size: 1.5rem;
   font-weight: 800;
-  color: var(--text-primary);
+  color: #ffffff;
 }
 
 .footer-text {
-  color: var(--text-muted);
+  color: #94a3b8;
   font-size: 0.9rem;
 }
 
-/* Hover effects for social links in Footer */
 .footer-socials {
   display: flex;
   gap: 1.5rem;
@@ -43,10 +42,10 @@
 }
 
 .footer-socials a {
-  color: var(--text-secondary);
+  color: #cbd5e1;
   transition: color var(--transition-fast);
 }
 
 .footer-socials a:hover {
-  color: var(--accent);
+  color: #60a5fa;
 }
