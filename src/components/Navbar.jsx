@@ -2,24 +2,25 @@ import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import './Navbar.css';
 
+const NAV_ITEMS = [
+  { id: 'home', label: 'Beranda' },
+  { id: 'about', label: 'Tentang' },
+  { id: 'services', label: 'Layanan' },
+  { id: 'projects', label: 'Portofolio' },
+  { id: 'experience', label: 'Pengalaman' },
+  { id: 'contact', label: 'Kontak' }
+];
+
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [scrollProgress, setScrollProgress] = useState(0);
   const [activeSection, setActiveSection] = useState('home');
 
-  const navItems = [
-    { id: 'home', label: 'Beranda' },
-    { id: 'about', label: 'Tentang' },
-    { id: 'experience', label: 'Pengalaman' },
-    { id: 'projects', label: 'Portofolio' },
-    { id: 'contact', label: 'Kontak' }
-  ];
-
   useEffect(() => {
     const handleScroll = () => {
       // 1. Scrolled state
-      if (window.scrollY > 20) {
+      if (window.scrollY > 15) {
         setScrolled(true);
       } else {
         setScrolled(false);
@@ -33,7 +34,7 @@ const Navbar = () => {
 
       // 3. Active Section highlight
       const scrollPosition = window.scrollY + 120; // offset for nav bar
-      for (const item of navItems) {
+      for (const item of NAV_ITEMS) {
         const el = document.getElementById(item.id);
         if (el) {
           const top = el.offsetTop;
@@ -71,7 +72,7 @@ const Navbar = () => {
 
         {/* Desktop Nav Links */}
         <ul className={`navbar-links ${mobileMenuOpen ? 'open' : ''}`}>
-          {navItems.map((item) => (
+          {NAV_ITEMS.map((item) => (
             <li key={item.id} className="navbar-link-item">
               <a
                 href={`#${item.id}`}
@@ -85,6 +86,14 @@ const Navbar = () => {
         </ul>
 
         <div className="navbar-actions">
+          <a
+            href="#contact"
+            className="navbar-cta-btn"
+            onClick={(e) => handleNavClick(e, 'contact')}
+          >
+            Konsultasi IT
+          </a>
+
           {/* Hamburger Menu Icon */}
           <button
             className="mobile-menu-toggle"

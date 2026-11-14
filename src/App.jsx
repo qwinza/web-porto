@@ -2,11 +2,10 @@ import React from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
-import Experience from './components/Experience';
+import Services from './components/Services';
 import Projects from './components/Projects';
+import Experience from './components/Experience';
 import Contact from './components/Contact';
-import { cvData } from './data/cvData';
-import { Heart } from 'lucide-react';
 import Icon from './components/Icon';
 import './App.css';
 
@@ -20,14 +19,16 @@ function App() {
       <main>
         <Hero />
         <About />
-        <Experience />
+        <Services />
         <Projects />
+        <Experience />
         <Contact />
       </main>
 
       <footer className="footer">
         <div className="container footer-content">
           <div className="footer-logo">FAS Digital Solutions</div>
+          <p className="footer-tagline">Software House &bull; Enterprise IT &amp; Custom Web Solutions</p>
           
           <div className="footer-socials">
             <a href="https://github.com/qwinza" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
@@ -39,7 +40,7 @@ function App() {
           </div>
 
           <p className="footer-text">
-            © {currentYear} {cvData.profile.name}. Made with <Heart size={12} style={{ color: 'red', display: 'inline', verticalAlign: 'middle' }} /> and React.
+            &copy; {currentYear} FAS Digital Solutions. Seluruh Hak Cipta Dilindungi Undang-Undang.
           </p>
         </div>
       </footer>

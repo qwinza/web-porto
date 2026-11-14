@@ -1,5 +1,5 @@
 import React from 'react';
-import { ExternalLink, Lock, Code, Smartphone } from 'lucide-react';
+import { ExternalLink, Lock, Code, Smartphone, ShieldCheck, Server } from 'lucide-react';
 import Icon from './Icon';
 
 const ProjectCard = ({ project }) => {
@@ -25,28 +25,49 @@ const ProjectCard = ({ project }) => {
 
   const isMobileProject = category && category.toLowerCase().includes('mobile');
 
+  const slug = category ? category.toLowerCase().replace(/[^a-z0-9]/g, '') : 'portal';
+
   return (
     <div className="project-card glass-card">
+      {/* Dashboard Top Application Bar */}
+      <div className="project-dashboard-bar">
+        <div className="window-dots" aria-hidden="true">
+          <span className="dot dot-close"></span>
+          <span className="dot dot-minimize"></span>
+          <span className="dot dot-expand"></span>
+        </div>
+        <span className="window-app-url">sys.fasdigital.id/{slug}</span>
+        <span className={`window-status-badge ${isConfidential ? 'status-confidential' : 'status-live'}`}>
+          {isConfidential ? <Lock size={11} /> : <Server size={11} />}
+          <span>{isConfidential ? 'Confidential' : 'Live System'}</span>
+        </span>
+      </div>
+
       <div className="project-image-container">
         {isConfidential ? (
           <div className="confidential-placeholder">
             <div className="confidential-icon-wrapper">
-              <Lock size={26} className="confidential-lock-icon" />
+              <ShieldCheck size={26} className="confidential-lock-icon" />
             </div>
-            <span className="confidential-title">Private / Confidential Project</span>
+            <span className="confidential-title">Private Enterprise Architecture</span>
             <span className="confidential-subtitle">NDA Protected &bull; Source Code Private</span>
           </div>
         ) : !image ? (
           <div className="project-fallback-placeholder">
-            <div className="fallback-icon-wrapper">
-              {isMobileProject ? (
-                <Smartphone size={26} className="fallback-icon" />
-              ) : (
-                <Code size={26} className="fallback-icon" />
-              )}
+            <div className="fallback-dashboard-mockup">
+              <div className="mockup-header-row">
+                <span className="mockup-chip">{category || 'B2B Enterprise'}</span>
+                <span className="mockup-metric">99.9% Uptime</span>
+              </div>
+              <div className="fallback-icon-wrapper">
+                {isMobileProject ? (
+                  <Smartphone size={24} className="fallback-icon" />
+                ) : (
+                  <Code size={24} className="fallback-icon" />
+                )}
+              </div>
+              <span className="fallback-title">{title}</span>
             </div>
-            <span className="fallback-title">{category || 'Software Project'}</span>
-            <span className="fallback-subtitle">{title}</span>
           </div>
         ) : (
           <img
@@ -67,10 +88,10 @@ const ProjectCard = ({ project }) => {
                 className="project-action-link"
                 target="_blank"
                 rel="noopener noreferrer"
-                title="View GitHub Repository"
+                title="Lihat Repositori GitHub"
                 aria-label="GitHub Repository Link"
               >
-                <Icon name="Github" size={20} />
+                <Icon name="Github" size={18} />
               </a>
             )}
             {demoUrl && (
@@ -79,10 +100,10 @@ const ProjectCard = ({ project }) => {
                 className="project-action-link"
                 target="_blank"
                 rel="noopener noreferrer"
-                title="View Live Site Demo"
+                title="Buka Demo Sistem"
                 aria-label="Live Demo Link"
               >
-                <ExternalLink size={20} />
+                <ExternalLink size={18} />
               </a>
             )}
           </div>

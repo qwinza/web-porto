@@ -21,10 +21,10 @@ const Contact = () => {
   return (
     <section id="contact">
       <div className="container">
-        <span className="section-eyebrow fade-in-up">Kontak</span>
+        <span className="section-eyebrow fade-in-up">Hubungi Kami</span>
         <h2 className="section-title fade-in-up">Konsultasi IT Gratis</h2>
         <p className="section-subtitle fade-in-up animation-delay-100">
-          Bahas kebutuhan digital bisnis Anda. Konsultasi awal gratis, tanpa komitmen.
+          Diskusikan kebutuhan arsitektur digital dan pengembangan sistem Anda. Konsultasi awal gratis dan tanpa komitmen.
         </p>
 
         <div className="contact-direct-wrapper fade-in-up animation-delay-200">
@@ -32,7 +32,7 @@ const Contact = () => {
           <div className="contact-status-banner glass-card">
             <div className="status-indicator">
               <span className="status-pulse-dot"></span>
-              <span className="status-text">Menerima Proyek Custom Web App &amp; Sistem B2B</span>
+              <span className="status-text">Menerima Klien Baru: Custom Web App &amp; Sistem B2B</span>
             </div>
             <span className="status-subtext">Berbasis di Bandung &bull; Melayani Klien Seluruh Indonesia</span>
           </div>
@@ -43,9 +43,9 @@ const Contact = () => {
             <div className="direct-contact-card glass-card">
               <div className="direct-card-header">
                 <div className="direct-card-icon icon-emerald">
-                  <MessageCircle size={24} />
+                  <MessageCircle size={22} />
                 </div>
-                <span className="direct-card-tag">Primary Contact</span>
+                <span className="direct-card-tag">Saluran Utama</span>
               </div>
               <h3 className="direct-card-title">WhatsApp Business</h3>
               <p className="direct-card-detail">+62 819-4909-5389</p>
@@ -55,7 +55,7 @@ const Contact = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Konsultasi IT Gratis <Send size={16} />
+                Konsultasi IT Gratis <Send size={15} />
               </a>
             </div>
 
@@ -63,11 +63,11 @@ const Contact = () => {
             <div className="direct-contact-card glass-card">
               <div className="direct-card-header">
                 <div className="direct-card-icon icon-blue">
-                  <Mail size={24} />
+                  <Mail size={22} />
                 </div>
-                <span className="direct-card-tag">Email Bisnis</span>
+                <span className="direct-card-tag">Email Resmi</span>
               </div>
-              <h3 className="direct-card-title">Email Address</h3>
+              <h3 className="direct-card-title">Email Bisnis</h3>
               <p className="direct-card-detail">farisahmad1210@gmail.com</p>
               <a
                 href={emailUrl}
@@ -75,42 +75,42 @@ const Contact = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Kirim Email <Send size={16} />
+                Kirim Email <Send size={15} />
               </a>
             </div>
 
             {/* LinkedIn Direct Card */}
             <div className="direct-contact-card glass-card">
               <div className="direct-card-header">
-                <div className="direct-card-icon icon-cyan">
-                  <Icon name="Linkedin" size={24} />
+                <div className="direct-card-icon icon-navy">
+                  <Icon name="Linkedin" size={22} />
                 </div>
-                <span className="direct-card-tag">Professional Network</span>
+                <span className="direct-card-tag">Jaringan Profesional</span>
               </div>
-              <h3 className="direct-card-title">LinkedIn</h3>
-              <p className="direct-card-detail">Aa Faris Ahmad Shidiq</p>
+              <h3 className="direct-card-title">LinkedIn Perusahaan</h3>
+              <p className="direct-card-detail">Aa Faris Ahmad Shidiq &bull; Lead Developer</p>
               <a
                 href={linkedinUrl}
                 className="btn btn-secondary direct-card-action"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Hubungi via LinkedIn <ArrowUpRight size={16} />
+                Hubungi via LinkedIn <ArrowUpRight size={15} />
               </a>
             </div>
 
             {/* Location & Info Card */}
             <div className="direct-contact-card glass-card">
               <div className="direct-card-header">
-                <div className="direct-card-icon icon-purple">
-                  <MapPin size={24} />
+                <div className="direct-card-icon icon-slate">
+                  <MapPin size={22} />
                 </div>
-                <span className="direct-card-tag">Lokasi</span>
+                <span className="direct-card-tag">Kantor Operasional</span>
               </div>
               <h3 className="direct-card-title">Basis Operasional</h3>
               <p className="direct-card-detail">Bandung, Jawa Barat, Indonesia</p>
               <div className="location-info-badge">
-                <span>Melayani Klien Seluruh Indonesia</span>
+                <span>Dukungan Remote &amp; On-Site Seluruh Indonesia</span>
               </div>
             </div>
           </div>

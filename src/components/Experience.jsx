@@ -10,16 +10,16 @@ const Experience = () => {
     <section id="experience">
       <div className="container">
         <span className="section-eyebrow fade-in-up">Rekam Jejak</span>
-        <h2 className="section-title fade-in-up">Track Record &amp; Keahlian</h2>
+        <h2 className="section-title fade-in-up">Track Record &amp; Pengalaman</h2>
         <p className="section-subtitle fade-in-up animation-delay-100">
-          Pengalaman dan keahlian yang kami bawa ke setiap proyek.
+          Pengalaman teknis dan manajerial dalam merancang, membangun, dan merilis solusi digital skala industri.
         </p>
 
         <div className="experience-container">
           {/* Work Experience Timeline */}
           <div className="work-experience-section fade-in-up animation-delay-200">
             <h3 className="experience-title-sub">
-              <Briefcase size={22} /> Pengalaman
+              <Briefcase size={20} /> Riwayat Pengalaman Profesional
             </h3>
 
             <div className="timeline">
