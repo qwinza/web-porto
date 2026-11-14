@@ -1,35 +1,32 @@
 import React from 'react';
-import { Cpu, Palette, Database, Zap, CheckCircle2, ArrowRight } from 'lucide-react';
+import { Cpu, Globe, Zap, CheckCircle2, ArrowRight } from 'lucide-react';
 import { cvData } from '../data/cvData';
 import './Services.css';
 
 const iconMap = {
   Cpu: <Cpu size={26} />,
-  Palette: <Palette size={26} />,
-  Database: <Database size={26} />,
+  Globe: <Globe size={26} />,
   Zap: <Zap size={26} />
 };
 
 const serviceDeliverables = {
-  "Pengembangan Custom Web App": [
-    "Enterprise Management Dashboard",
-    "Portal Internal & B2B Client Area",
-    "Arsitektur Web Skalabel & Responsif"
+  "Custom Web Application": [
+    "Pengembangan Sistem Internal (ERP, CRM, & HRIS)",
+    "Penyesuaian 100% dengan SOP Perusahaan Anda",
+    "Database Relasional & Role-Based Access Control",
+    "Arsitektur Skalabel, Aman, & Berkinerja Tinggi"
   ],
-  "UI/UX & Design System": [
-    "Figma Design System Komprehensif",
-    "High-Fidelity Interactive Prototype",
-    "Standar Aksesibilitas (WCAG) & Brand Guide"
+  "Corporate Web Presence": [
+    "Company Profile Modern, Cepat, & Mobile-First",
+    "Penguatan Identitas Korporat di Mesin Pencari (SEO)",
+    "Desain Eksklusif Meningkatkan Kepercayaan Klien B2B",
+    "Integrasi Lead Generation & Formulir Kontak Interaktif"
   ],
-  "Arsitektur API & Database": [
-    "RESTful & GraphQL API Berkinerja Tinggi",
-    "Relational Database Design & Indexing",
-    "Autentikasi Aman Berbasis Role & JWT"
-  ],
-  "Optimasi Performa": [
-    "Audit Core Web Vitals (LCP, INP, CLS)",
-    "Bundle Code Splitting & Caching Strategy",
-    "Optimasi Kecepatan & Skor PageSpeed 95+"
+  "API & System Integration": [
+    "WhatsApp Gateway & Notifikasi Otomatis",
+    "Bot Telegram untuk Monitoring & Alert Bisnis",
+    "Integrasi Payment Gateway & Layanan Logistik",
+    "Sinkronisasi Real-Time Lintas Platform & Cloud"
   ]
 };
 

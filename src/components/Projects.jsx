@@ -19,10 +19,10 @@ const Projects = () => {
   return (
     <section id="projects">
       <div className="container">
-        <span className="section-eyebrow fade-in-up">Portofolio Sistem</span>
-        <h2 className="section-title fade-in-up">Proyek &amp; Implementasi Solusi</h2>
+        <span className="section-eyebrow fade-in-up">Studi Kasus</span>
+        <h2 className="section-title fade-in-up">Studi Kasus &amp; Dampak Bisnis</h2>
         <p className="section-subtitle fade-in-up animation-delay-100">
-          Kumpulan arsitektur sistem, aplikasi web kustom, dan integrasi B2B yang kami kembangkan untuk efisiensi operasional klien.
+          Studi kasus implementasi solusi teknologi kami dalam mentransformasi proses bisnis, memangkas inefisiensi operasional, dan menghadirkan dampak nyata bagi klien.
         </p>
 
         {/* Filter Navigation */}

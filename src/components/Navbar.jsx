@@ -5,10 +5,11 @@ import './Navbar.css';
 
 const NAV_ITEMS = [
   { id: 'home', label: 'Beranda' },
-  { id: 'about', label: 'Tentang' },
+  { id: 'problem-solution', label: 'Mengapa Kami' },
   { id: 'services', label: 'Layanan' },
-  { id: 'projects', label: 'Portofolio' },
-  { id: 'experience', label: 'Pengalaman' },
+  { id: 'methodology', label: 'Metodologi' },
+  { id: 'projects', label: 'Studi Kasus' },
+  { id: 'about', label: 'Tentang' },
   { id: 'contact', label: 'Kontak' }
 ];
 

@@ -116,7 +116,30 @@ const ProjectCard = ({ project }) => {
           {category && <span className="project-category-badge">{category}</span>}
         </div>
 
-        <p className="project-card-desc">{description}</p>
+        {description && description.includes(' | ') ? (
+          <div className="project-card-desc structured-desc">
+            {description.split(' | ').map((part, pIdx) => {
+              const colonIndex = part.indexOf(':');
+              if (colonIndex !== -1) {
+                const label = part.substring(0, colonIndex).trim();
+                const value = part.substring(colonIndex + 1).trim();
+                return (
+                  <div key={pIdx} className="desc-segment">
+                    <span className="desc-label">{label}:</span>
+                    <span className="desc-value">{value}</span>
+                  </div>
+                );
+              }
+              return (
+                <div key={pIdx} className="desc-segment">
+                  <span>{part}</span>
+                </div>
+              );
+            })}
+          </div>
+        ) : (
+          <p className="project-card-desc">{description}</p>
+        )}
 
         <div className="project-card-tags">
           {technologies.map((tech, tagIdx) => (

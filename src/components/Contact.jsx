@@ -15,7 +15,7 @@ const Contact = () => {
   const whatsappUrl =
     'https://wa.me/6281949095389?text=Halo%20FAS%20Digital%20Solutions%2C%20saya%20ingin%20konsultasi%20IT%20gratis.';
   const emailUrl =
-    "mailto:farisahmad1210@gmail.com?subject=Konsultasi%20IT%20FAS%20Digital%20Solutions";
+    "mailto:hello@fasdigital.id?subject=Konsultasi%20IT%20FAS%20Digital%20Solutions";
   const linkedinUrl = getSocialUrl('linkedin') !== '#' ? getSocialUrl('linkedin') : "https://linkedin.com";
 
   return (
@@ -65,10 +65,10 @@ const Contact = () => {
                 <div className="direct-card-icon icon-blue">
                   <Mail size={22} />
                 </div>
-                <span className="direct-card-tag">Email Resmi</span>
+                <span className="direct-card-tag">Kontak Representatif</span>
               </div>
               <h3 className="direct-card-title">Email Bisnis</h3>
-              <p className="direct-card-detail">farisahmad1210@gmail.com</p>
+              <p className="direct-card-detail">hello@fasdigital.id</p>
               <a
                 href={emailUrl}
                 className="btn btn-secondary direct-card-action"

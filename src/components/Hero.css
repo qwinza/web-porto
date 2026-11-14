@@ -61,25 +61,15 @@
   display: block;
 }
 
-.hero-typed-line {
-  display: flex;
-  align-items: baseline;
-  white-space: nowrap;
-  min-height: 1.15em;
+.hero-title-accent {
   color: #1E3A8A;
-  font-weight: 800;
-}
-
-.typed-accent {
-  color: #1E3A8A;
-  margin-left: 0.45rem;
-  border-bottom: 3px solid rgba(30, 58, 138, 0.25);
+  display: block;
 }
 
 .hero-subtitle {
   font-size: 1.15rem;
   color: #475569;
-  max-width: 560px;
+  max-width: 580px;
   line-height: 1.65;
 }
 
@@ -88,6 +78,24 @@
   gap: 1rem;
   margin-top: 0.6rem;
   flex-wrap: wrap;
+}
+
+/* Trust badge directly under CTA buttons */
+.hero-trust-badge {
+  margin-top: 0.35rem;
+  margin-bottom: 0.2rem;
+}
+
+.trust-badge-text {
+  font-size: 0.85rem;
+  color: #64748B;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+
+.trust-client {
+  color: #334155;
+  font-weight: 600;
 }
 
 /* Trust row under buttons */
@@ -234,7 +242,7 @@
   .hero-grid { grid-template-columns: 1fr; gap: 2.75rem; }
   .hero-content { align-items: center; text-align: center; }
   .hero-title { font-size: 2.15rem; align-items: center; }
-  .hero-typed-line { justify-content: center; }
+  .hero-trust-badge { text-align: center; }
   .hero-buttons { width: 100%; flex-direction: column; }
   .hero-buttons .btn { width: 100%; }
   .hero-trust-row { justify-content: center; }

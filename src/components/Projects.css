@@ -336,6 +336,32 @@
   flex-grow: 1;
 }
 
+/* Structured B2B Case Study Description */
+.structured-desc {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.desc-segment {
+  display: flex;
+  align-items: baseline;
+  gap: 0.45rem;
+  font-size: 0.88rem;
+  line-height: 1.5;
+}
+
+.desc-label {
+  font-weight: 700;
+  color: #0A192F;
+  flex-shrink: 0;
+  font-size: 0.84rem;
+}
+
+.desc-value {
+  color: #475569;
+}
+
 /* Tech tags list - Clean dashboard chips */
 .project-card-tags {
   display: flex;

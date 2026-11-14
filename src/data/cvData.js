@@ -45,27 +45,21 @@ export const cvData = {
   projects: projectsData,
   services: [
     {
-      title: "Pengembangan Custom Web App",
+      title: "Custom Web Application",
       description:
-        "Aplikasi web custom yang dirancang sesuai alur bisnis Anda: dashboard, portal, dan sistem internal yang responsif dan cepat.",
+        "Pengembangan sistem internal (ERP/CRM/HRIS) yang disesuaikan 100% dengan SOP perusahaan Anda.",
       icon: "Cpu",
     },
     {
-      title: "UI/UX & Design System",
+      title: "Corporate Web Presence",
       description:
-        "Desain antarmuka dan design system yang konsisten di Figma, lalu diimplementasikan menjadi komponen yang rapi dan aksesibel.",
-      icon: "Palette",
+        "Pembuatan Company Profile modern untuk memperkuat identitas korporat di mesin pencari.",
+      icon: "Globe",
     },
     {
-      title: "Arsitektur API & Database",
+      title: "API & System Integration",
       description:
-        "Membangun REST API dan GraphQL yang aman dengan Node.js, terintegrasi ke basis data relasional maupun non-relasional.",
-      icon: "Database",
-    },
-    {
-      title: "Optimasi Performa",
-      description:
-        "Audit dan optimasi aplikasi web untuk memperkecil bundle, menerapkan caching aset, dan mencapai skor PageSpeed 95+.",
+        "Integrasi sistem otomatisasi (WhatsApp Gateway, Bot Telegram, Payment Gateway) untuk kelancaran operasional.",
       icon: "Zap",
     },
   ],

@@ -20,7 +20,7 @@ export const projectsData = [
     category: "Sistem B2B",
     techStack: ["Laravel", "MySQL", "REST API", "TailwindCSS"],
     description:
-      "Platform perdagangan langsung hasil tani yang menghubungkan petani dengan pembeli grosir. Fitur manajemen stok, penawaran harga, dan riwayat transaksi B2B.",
+      "Klien: Platform Agrikultur | Tantangan: Rantai pasok panjang | Solusi: Membangun arsitektur direct-trade berbasis web | Dampak: Menghubungkan petani dan pembeli secara efisien.",
     image: `${base}images/project-solaria.webp`,
     isConfidential: false,
     link: null,
@@ -118,11 +118,11 @@ export const profileData = {
   name: "FAS Digital Solutions",
   title: "Software House - Custom Web App & Sistem B2B",
   subtitle:
-    "Membangun solusi digital custom untuk bisnis Anda, dari company profile hingga sistem B2B dan transformasi digital.",
+    "FAS Digital Solutions adalah mitra strategis Anda dalam pengembangan Custom Web App, Sistem ERP, dan Corporate Portal berkinerja tinggi.",
   bio: "FAS Digital Solutions adalah Software House yang berfokus pada pengembangan Custom Web App, Sistem B2B, dan Transformasi Digital. Dipimpin oleh Aa Faris Ahmad Shidiq selaku Lead Developer",
   socials: [
     { name: "Github", url: "https://github.com/qwinza", icon: "Github" },
     { name: "LinkedIn", url: "https://linkedin.com", icon: "Linkedin" },
-    { name: "Email", url: "mailto:farisahmad1210@gmail.com", icon: "Mail" }
+    { name: "Email", url: "mailto:hello@fasdigital.id", icon: "Mail" }
   ]
 };
