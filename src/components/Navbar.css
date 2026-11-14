@@ -35,16 +35,15 @@
   color: #0A192F;
   display: flex;
   align-items: center;
-  gap: 0.6rem;
+  gap: 0.65rem;
 }
 
-.navbar-logo::before {
-  content: '';
-  width: 10px;
-  height: 10px;
-  border-radius: 3px;
-  background: #1E3A8A;
+.navbar-logo-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
   flex-shrink: 0;
+  display: block;
 }
 
 .navbar-links {

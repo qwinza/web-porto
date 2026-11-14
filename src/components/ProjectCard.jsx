@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { ExternalLink, Lock, Code, Smartphone, ShieldCheck, Server } from 'lucide-react';
 import Icon from './Icon';
 
 const ProjectCard = ({ project }) => {
+  const [imageError, setImageError] = useState(false);
+
   const {
     title,
     description,
@@ -24,7 +26,6 @@ const ProjectCard = ({ project }) => {
   const demoUrl = liveUrl || (link && !link.includes('github') ? link : null);
 
   const isMobileProject = category && category.toLowerCase().includes('mobile');
-
   const slug = category ? category.toLowerCase().replace(/[^a-z0-9]/g, '') : 'portal';
 
   return (
@@ -52,7 +53,7 @@ const ProjectCard = ({ project }) => {
             <span className="confidential-title">Private Enterprise Architecture</span>
             <span className="confidential-subtitle">NDA Protected &bull; Source Code Private</span>
           </div>
-        ) : !image ? (
+        ) : !image || imageError ? (
           <div className="project-fallback-placeholder">
             <div className="fallback-dashboard-mockup">
               <div className="mockup-header-row">
@@ -73,9 +74,8 @@ const ProjectCard = ({ project }) => {
           <img
             src={image}
             alt={title}
-            onError={(e) => {
-              e.target.style.display = 'none';
-            }}
+            loading="lazy"
+            onError={() => setImageError(true)}
           />
         )}
 

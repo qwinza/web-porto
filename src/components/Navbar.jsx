@@ -67,6 +67,7 @@ const Navbar = () => {
     <header className={`navbar-header ${scrolled ? 'scrolled' : ''}`}>
       <div className="navbar-container">
         <a href="#home" className="navbar-logo" onClick={(e) => handleNavClick(e, 'home')}>
+          <img src="/favicon.svg" alt="FAS Emblem" className="navbar-logo-icon" width="28" height="28" />
           <span>FAS Digital Solutions</span>
         </a>
 

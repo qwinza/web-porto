@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ArrowRight, Briefcase } from 'lucide-react';
+import { ArrowRight, Briefcase, CheckCircle2 } from 'lucide-react';
 import { cvData } from '../data/cvData';
 import logoImage from '../assets/logo-agency.png';
 import './Hero.css';
@@ -87,15 +87,41 @@ const Hero = () => {
                 Lihat Portofolio <Briefcase size={18} />
               </a>
             </div>
+
+            <div className="hero-trust-row">
+              <span className="trust-item">
+                <CheckCircle2 size={16} className="trust-icon" /> Solusi Skalabel
+              </span>
+              <span className="trust-item">
+                <CheckCircle2 size={16} className="trust-icon" /> Keamanan Standar B2B
+              </span>
+              <span className="trust-item">
+                <CheckCircle2 size={16} className="trust-icon" /> Bergaransi &amp; Siap Deploy
+              </span>
+            </div>
           </div>
 
           <div className="hero-image-container fade-in-up animation-delay-200">
-            <div className="hero-image-wrapper">
-              <img 
-                src={logoImage} 
-                alt="Logo FAS Digital Solutions" 
-                className="hero-logo-img"
-              />
+            <div className="hero-brand-frame">
+              <div className="hero-image-wrapper">
+                <img 
+                  src={logoImage} 
+                  alt="Logo FAS Digital Solutions HD" 
+                  className="hero-logo-img"
+                  width="1024"
+                  height="1024"
+                />
+              </div>
+
+              {/* Floating Corporate Badges */}
+              <div className="floating-badge badge-top">
+                <span className="badge-dot"></span>
+                <span className="badge-text">Enterprise IT Partner</span>
+              </div>
+              <div className="floating-badge badge-bottom">
+                <span className="badge-pulse"></span>
+                <span className="badge-text">99.9% Production SLA</span>
+              </div>
             </div>
           </div>
         </div>
