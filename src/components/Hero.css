@@ -124,8 +124,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1.5rem;
-  max-width: 440px;
+  padding: 1.5rem 0.5rem;
+  max-width: 460px;
   width: 100%;
 }
 
@@ -136,17 +136,17 @@
   align-items: center;
   justify-content: center;
   background: transparent;
+  width: 100%;
 }
 
 .hero-logo-img {
   width: 100%;
-  max-width: 360px;
+  max-width: 400px;
   height: auto;
   object-fit: contain;
   border-radius: 0;
   background: transparent;
-  mix-blend-mode: multiply;
-  filter: drop-shadow(0 14px 30px rgba(10, 25, 47, 0.09));
+  filter: drop-shadow(0 12px 28px rgba(10, 25, 47, 0.08));
   transition: transform var(--transition-normal);
 }
 

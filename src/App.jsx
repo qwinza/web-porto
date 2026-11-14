@@ -7,6 +7,7 @@ import Projects from './components/Projects';
 import Experience from './components/Experience';
 import Contact from './components/Contact';
 import Icon from './components/Icon';
+import logoEmblem from './assets/logo-emblem-pure.png';
 import './App.css';
 
 function App() {
@@ -27,7 +28,10 @@ function App() {
 
       <footer className="footer">
         <div className="container footer-content">
-          <div className="footer-logo">FAS Digital Solutions</div>
+          <div className="footer-logo">
+            <img src={logoEmblem} alt="FAS Emblem" className="footer-logo-icon" width="28" height="31" />
+            <span>FAS Digital Solutions</span>
+          </div>
           <p className="footer-tagline">Software House &bull; Enterprise IT &amp; Custom Web Solutions</p>
           
           <div className="footer-socials">

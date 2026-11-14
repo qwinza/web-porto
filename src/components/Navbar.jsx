@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
+import logoEmblem from '../assets/logo-emblem-pure.png';
 import './Navbar.css';
 
 const NAV_ITEMS = [
@@ -67,8 +68,16 @@ const Navbar = () => {
     <header className={`navbar-header ${scrolled ? 'scrolled' : ''}`}>
       <div className="navbar-container">
         <a href="#home" className="navbar-logo" onClick={(e) => handleNavClick(e, 'home')}>
-          <img src="/favicon.svg" alt="FAS Emblem" className="navbar-logo-icon" width="28" height="28" />
-          <span>FAS Digital Solutions</span>
+          <img 
+            src={logoEmblem} 
+            alt="FAS Digital Solutions Logo" 
+            className="navbar-logo-emblem" 
+            width="32" 
+            height="35" 
+          />
+          <span className="navbar-logo-text">
+            FAS <span className="navbar-logo-accent">Digital Solutions</span>
+          </span>
         </a>
 
         {/* Desktop Nav Links */}

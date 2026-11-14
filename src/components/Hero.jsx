@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { ArrowRight, Briefcase, CheckCircle2 } from 'lucide-react';
 import { cvData } from '../data/cvData';
-import logoImage from '../assets/logo-agency.png';
+import logoImage from '../assets/logo-full-transparent.png';
 import './Hero.css';
 
 const WORDS = ['Company Profile', 'Custom Web App', 'Sistem B2B', 'Transformasi Digital'];
